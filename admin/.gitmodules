@@ -1,0 +1,3 @@
+[submodule "src/components/DynamicComponent"]
+	path = src/components/DynamicComponent
+	url = https://github.com/grish2018/v-soft-dynamic-component.git

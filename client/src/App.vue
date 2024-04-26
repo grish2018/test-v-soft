@@ -1,0 +1,25 @@
+<template>
+  <DataViewer/>
+</template>
+
+<script>
+import DataViewer from './components/DynamicComponent/DataViewer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    DataViewer
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

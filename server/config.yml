@@ -1,2 +1,28 @@
-template: "<div>V-SOFT-TES</div>"
-style: "div { color: red; }"
+template: '<div class="card">
+  <img src="dataiImgUrl" alt="Картинка">
+  <div class="content">
+    <h2>dataTitle</h2>
+    <p>dataText</p>
+  </div>
+</div>'
+style: '.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card .content {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }'

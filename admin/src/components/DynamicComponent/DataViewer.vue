@@ -13,8 +13,12 @@ export default {
     onMounted(async () => {
       try {
         const { data: templateData } = await axios.get('http://localhost:3000/api/template');
-        const template = templateData.template || '<div>{{ title }}<br>{{ text }}</div>';
+        const { data } = await axios.get('http://localhost:3000/api/data');
+        let template = templateData.template || '<div>{{ title }}<br>{{ text }}</div>';
         const style = `<style>${templateData.style || 'div { color: red; }'}</style>`;
+        template = template.replace('dataTitle', data.title).
+        replace('dataText', data.text).
+        replace('dataiImgUrl', data.imageUrl)
         
         compiledHtml.value = style + template;
       } catch (error) {
